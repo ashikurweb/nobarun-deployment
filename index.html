@@ -216,16 +216,6 @@
               Live Demo
             </span>
           </a>
-          <a
-            href="https://github.com/ashikurweb"
-            target="_blank"
-            class="text-sm font-medium text-brand-600 hover:text-brand-700 transition-all duration-200 hover:scale-105 focus-ring rounded-lg px-3 py-1.5"
-          >
-            <span class="flex items-center gap-2">
-              <i data-lucide="github" class="w-4 h-4"></i>
-              GitHub
-            </span>
-          </a>
         </div>
       </div>
     </header>
@@ -541,9 +531,13 @@
                   the project root.
                 </p>
                 <div class="relative group">
-                  <div
-                    class="absolute inset-0 bg-gradient-to-r from-purple-500/5 to-pink-500/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity"
-                  ></div>
+                  <button
+                    onclick="copyCode(this)"
+                    class="absolute top-2 right-2 bg-slate-700 hover:bg-slate-600 text-white text-xs px-2 py-1 rounded transition-colors opacity-0 group-hover:opacity-100 flex items-center gap-1 whitespace-nowrap"
+                  >
+                    <i data-lucide="copy" class="w-3 h-3 flex-shrink-0"></i>
+                    <span>Copy</span>
+                  </button>
                   <pre
                     class="bg-slate-900 text-slate-50 p-4 rounded-xl font-mono text-sm overflow-x-auto code-scroll border border-slate-700"
                   ><code class="language-bash">cd /home/ploi/bderp.online</code></pre>
@@ -920,13 +914,73 @@
                   resources.
                 </p>
 
-                <div class="flex items-center gap-3 mt-6">
+                <div
+                  class="bg-gradient-to-br from-slate-50 to-slate-100 rounded-2xl p-6 border border-slate-200 mb-6"
+                >
+                  <h5 class="font-bold text-slate-900 mb-4 flex items-center gap-2">
+                    <i data-lucide="list" class="w-4 h-4 text-rose-600"></i>
+                    Step-by-Step Process:
+                  </h5>
+                  <ul class="space-y-4">
+                    <li class="flex items-start gap-3">
+                      <div
+                        class="w-6 h-6 bg-rose-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5"
+                      >
+                        <i
+                          data-lucide="power"
+                          class="w-3 h-3 text-rose-600"
+                        ></i>
+                      </div>
+                      <div>
+                        <span class="text-slate-700 font-medium block mb-1"
+                          >Turn off the Droplet first</span
+                        >
+                      </div>
+                    </li>
+                    <li class="flex items-start gap-3">
+                      <div
+                        class="w-6 h-6 bg-rose-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5"
+                      >
+                        <i
+                          data-lucide="maximize"
+                          class="w-3 h-3 text-rose-600"
+                        ></i>
+                      </div>
+                      <div>
+                        <span class="text-slate-700 font-medium block mb-1"
+                          >Resize the server back by selecting the previous configuration.</span
+                        >
+                      </div>
+                    </li>
+                    <li class="flex items-start gap-3">
+                      <div
+                        class="w-6 h-6 bg-rose-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5"
+                      >
+                        <i
+                          data-lucide="power"
+                          class="w-3 h-3 text-rose-600"
+                        ></i>
+                      </div>
+                      <div>
+                        <span class="text-slate-700 font-medium block mb-1"
+                          >Turn it back on</span
+                        >
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+
+                <div
+                  class="bg-gradient-to-r from-green-50 to-emerald-50 border border-green-200 rounded-2xl p-4 text-sm text-green-800 flex gap-3 mb-6"
+                >
                   <div
-                    class="w-3 h-3 bg-green-500 rounded-full animate-pulse"
-                  ></div>
-                  <span
-                    class="bg-gradient-to-r from-green-100 to-emerald-100 text-green-700 px-4 py-2 rounded-full text-sm font-bold border border-green-200"
-                    >Deployment Complete</span
+                    class="w-8 h-8 bg-green-100 rounded-xl flex items-center justify-center flex-shrink-0"
+                  >
+                    <i data-lucide="check-circle" class="w-4 h-4 text-green-600"></i>
+                  </div>
+                  <span class="font-medium"
+                    >After resizing, verify your application is running correctly
+                    by accessing the live demo link.</span
                   >
                 </div>
               </div>
@@ -946,15 +1000,6 @@
             2023 Nobarun Deployment Guide
           </p>
           <p class="text-slate-500 text-xs">All rights reserved.</p>
-        </div>
-        <div class="flex gap-4">
-          <a
-            href="https://github.com/ashikurweb"
-            target="_blank"
-            class="text-slate-400 hover:text-brand-600 transition-all duration-200 hover:scale-110 p-2 rounded-lg"
-          >
-            <i data-lucide="github" class="w-5 h-5"></i>
-          </a>
         </div>
       </div>
     </footer>
